@@ -20,7 +20,7 @@ config SPINNER_CURRSMP_SHUNT_STM32_ADC_RES
 
 config SPINNER_CURRSMP_SHUNT_STM32_ADC_SMP_TIME
 	int "ADC sampling time"
-	default 2
+	default 3
 	help
 	  ADC sampling time in cycles. Decimal sampling times must be rounded
 	  up, e.g. 19.5 needs to be provided as 20.
