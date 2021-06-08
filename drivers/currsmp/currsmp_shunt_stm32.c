@@ -165,6 +165,9 @@ static int adc_configure(const struct device *dev)
 	LL_ADC_SetChannelSamplingTime(config->adc, config->adc_ch_c, smp);
 
 	/* enable internal ADC regulator */
+#if defined(CONFIG_SOC_SERIES_STM32G4X)
+	LL_ADC_DisableDeepPowerDown(config->adc);
+#endif
 	LL_ADC_EnableInternalRegulator(config->adc);
 	k_busy_wait(LL_ADC_DELAY_INTERNAL_REGUL_STAB_US);
 	if (!LL_ADC_IsInternalRegulatorEnabled(config->adc)) {
