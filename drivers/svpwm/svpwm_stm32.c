@@ -8,9 +8,8 @@
 #include <soc.h>
 #include <drivers/gpio.h>
 #include <drivers/clock_control/stm32_clock_control.h>
-#include <pinmux/stm32/pinmux_stm32.h>
-
 #include <stm32_ll_tim.h>
+#include <pinmux/stm32/pinmux_stm32.h>
 
 #include <spinner/drivers/currsmp.h>
 #include <spinner/drivers/svpwm.h>
